@@ -34,6 +34,9 @@
     <!-- LINK VUE.JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <!-- LINK CSS  -->
+    <link rel="stylesheet" href="./css/style.css" />
+
     <!-- LINK JAVASCRIPT -->
     <script type="text/javascript" src="./js/main.js" defer></script>
 
@@ -42,7 +45,20 @@
 
   <body>
     <div id="root">
-      <h1 class="m-3">{{h1message}}</h1>
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="m-3">{{h1Message}}</h1>
+        <button
+          v-on:click="mostraImmagine()"
+          class="btn btn-primary text-center m-3"
+          href="#"
+          role="button"
+        >
+          Mostra la foto
+        </button>
+        <div>
+          <img :src="MyUrl" alt="" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
